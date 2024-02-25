@@ -42,6 +42,10 @@ body {
 	margin-right: 20px;
 }
 
+.menu li:last-child {
+    margin-right: 0;
+}
+
 .post {
     margin: 8%;
 }
