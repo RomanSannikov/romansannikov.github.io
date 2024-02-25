@@ -73,9 +73,26 @@ body {
     body {
         margin-left: 1%;
 		margin-right: 1%;
+		font-size: 16px;
     }
 
 	.post {
 		margin: 1%;
+	}
+
+	.logo {
+		font-size: 20px;
+	}
+
+	.post-title {
+		font-size: 30px;
+	}
+
+	.footer {
+		font-size: 10px;
+	}
+
+	.menu {
+		font-size: 16px;
 	}
 }
