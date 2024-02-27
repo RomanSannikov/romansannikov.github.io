@@ -47,13 +47,41 @@ body {
     margin-right: 0;
 }
 
+.content {
+	margin: 8%;
+}
+
 .post {
-    margin: 8%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .post-title {
 	margin-bottom: 2px;
 	font-size:40px
+}
+
+.post-card {
+	border: 1px solid #ccc;
+	border-style: hidden;
+	border-radius: 10px;
+	padding: 10px;
+	margin-bottom: 20px;
+	background: white;
+}
+
+.post-card:last-child {
+	margin-bottom: 0;
+}
+
+.post-card-title {
+	margin-bottom: 0;
+	margin-top: auto;
+	font-size:30px
+}
+
+.post-card-content {
+	font-size: 16px;
 }
 
 .footer {
