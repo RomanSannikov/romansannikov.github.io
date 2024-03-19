@@ -47,6 +47,12 @@ body {
     margin-right: 0;
 }
 
+.short-version {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
 .content {
 	margin: 8%;
 }
