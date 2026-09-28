@@ -93,7 +93,8 @@ body {
 .post-card-title {
 	margin-bottom: 0;
 	margin-top: auto;
-	font-size:30px
+	font-size:30px;
+	padding-bottom: 10px;
 }
 
 .post-card-content {
