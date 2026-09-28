@@ -128,3 +128,36 @@ body {
 		font-size: 16px;
 	}
 }
+
+.rainbow-text {
+    color: transparent;
+	text-decoration: none;
+    background: linear-gradient(
+        90deg,
+        #e53935,
+        #fb8c00,
+        #fdd835,
+        #43a047,
+        #1e88e5,
+        #8e24aa
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.rainbow-text {
+    background-size: 200% 100%;
+    animation: rainbow-shift 3s linear infinite;
+}
+
+@keyframes rainbow-shift {
+    to {
+        background-position: -200% 0;
+    }
+}
+
+.rainbow-banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
