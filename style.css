@@ -136,16 +136,14 @@ body {
 	}
 }
 
-@media (max-width: 410px) {
-    .nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.nav.is-stacked {
+    flex-direction: column;
+    align-items: flex-start;
+}
 
-    .menu {
-        flex-wrap: wrap;
-        row-gap: 4px;
-    }
+.nav.is-stacked .menu {
+    flex-wrap: wrap;
+    row-gap: 4px;
 }
 
 .rainbow-text {
@@ -185,14 +183,14 @@ body {
 .logo-tail {
     font-size: 1em;
     opacity: 1;
-    transition: font-size 0.8s ease, opacity 0.8s ease;
+    transition: font-size 0.9s ease, opacity 0.9s ease;
 }
 
 @media (max-width: 768px) and (prefers-reduced-motion: no-preference) {
     .logo-tail {
         font-size: 0;
         opacity: 0;
-        animation: shorten-logo 0.8s ease 2s backwards;
+        animation: shorten-logo 0.9s ease 1s backwards;
     }
 
     .logo:hover .logo-tail,
@@ -210,6 +208,5 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .nav { flex-wrap: wrap; }
     .logo-tail { transition: none; }
 }
