@@ -16,7 +16,8 @@ body {
 .nav {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
+	column-gap: 12px;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -26,9 +27,15 @@ body {
 	color: inherit;
 }
 
+.nav a.rainbow-text {
+	color: transparent;
+}
+
 .logo {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: bold;
+	flex-shrink: 0;
+	white-space: nowrap;
 }
 
 .menu {
@@ -37,6 +44,9 @@ body {
 	word-break: keep-all;
 	overflow-x: auto;
 	white-space: nowrap;
+	flex-shrink: 0;
+	padding-inline-start: 0;
+	max-width: 100%;
 }
 
 .menu li {
@@ -112,10 +122,6 @@ body {
 		margin: 1%;
 	}
 
-	.logo {
-		font-size: 20px;
-	}
-
 	.post-title {
 		font-size: 30px;
 	}
@@ -127,6 +133,18 @@ body {
 	.menu {
 		font-size: 16px;
 	}
+}
+
+@media (max-width: 410px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        row-gap: 4px;
+    }
 }
 
 .rainbow-text {
@@ -160,4 +178,37 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+/* Logo animation */
+.logo-tail {
+    font-size: 1em;
+    opacity: 1;
+    transition: font-size 0.8s ease, opacity 0.8s ease;
+}
+
+@media (max-width: 768px) and (prefers-reduced-motion: no-preference) {
+    .logo-tail {
+        font-size: 0;
+        opacity: 0;
+        animation: shorten-logo 0.8s ease 2s backwards;
+    }
+
+    .logo:hover .logo-tail,
+    .logo:focus-within .logo-tail {
+        font-size: 1em !important;
+        opacity: 1 !important;
+    }
+}
+
+@keyframes shorten-logo {
+    from {
+        font-size: 1em;
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nav { flex-wrap: wrap; }
+    .logo-tail { transition: none; }
 }
